@@ -21,3 +21,11 @@ C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRel
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Debug\entityLayer.pdb
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\obj\Debug\dataAccessLayer.dll
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\obj\Debug\dataAccessLayer.pdb
+C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Debug\dataAccessLayer.dll
+C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Debug\dataAccessLayer.pdb
+C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Debug\entityLayer.dll
+C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Debug\log4net.dll
+C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Debug\entityLayer.pdb
+C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\obj\Debug\dataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\obj\Debug\dataAccessLayer.dll
+C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\obj\Debug\dataAccessLayer.pdb
