@@ -119,6 +119,7 @@ C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRele
 C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.viewSalesRprt.resources
 C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.viewUsers.resources
 C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\bin\Debug\uiLayer.exe.config
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\bin\Debug\uiLayer.exe
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\bin\Debug\uiLayer.pdb
@@ -147,3 +148,5 @@ C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRe
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.exe
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.pdb
+=======
+>>>>>>> 7acb8790423e49c71ae5a2d43af8a19e7d303825

@@ -38,6 +38,7 @@ C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRele
 C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.dll
 C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.pdb
+<<<<<<< HEAD
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\businessLayer.dll
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\businessLayer.pdb
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\dataAccessLayer.dll
@@ -48,3 +49,5 @@ C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRe
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.dll
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.pdb
+=======
+>>>>>>> 7acb8790423e49c71ae5a2d43af8a19e7d303825

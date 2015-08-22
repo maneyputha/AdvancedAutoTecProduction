@@ -11,8 +11,11 @@ C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRele
 C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\bin\Debug\entityLayer.pdb
 C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Debug\entityLayer.dll
 C:\Users\Chalaka\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Debug\entityLayer.pdb
+<<<<<<< HEAD
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\bin\Debug\entityLayer.dll
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\bin\Debug\entityLayer.pdb
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Debug\entityLayer.dll
 C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Debug\entityLayer.pdb
+=======
+>>>>>>> 7acb8790423e49c71ae5a2d43af8a19e7d303825
