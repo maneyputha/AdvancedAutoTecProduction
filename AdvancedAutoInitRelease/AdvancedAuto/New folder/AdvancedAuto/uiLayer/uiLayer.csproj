@@ -114,6 +114,12 @@
     <Compile Include="editProducts.Designer.cs">
       <DependentUpon>editProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="editUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editUsers.Designer.cs">
+      <DependentUpon>editUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,11 +183,17 @@
     <EmbeddedResource Include="AddProduct.resx">
       <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddUsers.resx">
+      <DependentUpon>AddUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="currentStocks.resx">
       <DependentUpon>currentStocks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editProducts.resx">
       <DependentUpon>editProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editUsers.resx">
+      <DependentUpon>editUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuAdmin.resx">
       <DependentUpon>MainMenuAdmin.cs</DependentUpon>

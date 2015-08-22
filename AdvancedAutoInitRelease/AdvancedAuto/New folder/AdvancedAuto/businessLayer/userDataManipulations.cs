@@ -51,15 +51,20 @@ namespace businessLayer
                 return false;
         }
 
+        public Boolean updateUser(user User)
+        {
+            return new UserDataAccess().updateUser(User);
+        }
+
+        public Boolean deleteUser(user User)
+        {
+            return new UserDataAccess().deleteUser(User);
+        }
+
         public List<user> getAllUsers()
         {
             UserDataAccess uda1 = new UserDataAccess();
             return uda1.getAllUsers();
-        }
-
-        public Boolean deleteUser(user user)
-        {
-            return true;
         }
     }
 }

@@ -82,6 +82,7 @@
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(229, 20);
             this.txtFname.TabIndex = 20;
+            this.txtFname.TextChanged += new System.EventHandler(this.txtFname_TextChanged);
             // 
             // label1
             // 
@@ -92,6 +93,7 @@
             this.label1.Size = new System.Drawing.Size(81, 18);
             this.label1.TabIndex = 19;
             this.label1.Text = "First Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtLname
             // 
@@ -110,6 +112,7 @@
             this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 21;
             this.label2.Text = "Last Name";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtAddress
             // 
@@ -117,6 +120,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(584, 20);
             this.txtAddress.TabIndex = 24;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // label3
             // 
@@ -127,6 +131,7 @@
             this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 23;
             this.label3.Text = "Address";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtTel
             // 
@@ -134,6 +139,7 @@
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(229, 20);
             this.txtTel.TabIndex = 26;
+            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             // 
             // label4
             // 
@@ -144,6 +150,7 @@
             this.label4.Size = new System.Drawing.Size(77, 18);
             this.label4.TabIndex = 25;
             this.label4.Text = "Telephone";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -154,6 +161,7 @@
             this.label5.Size = new System.Drawing.Size(39, 18);
             this.label5.TabIndex = 27;
             this.label5.Text = "Role";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // cmbRole
             // 
@@ -163,6 +171,7 @@
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(229, 21);
             this.cmbRole.TabIndex = 28;
+            this.cmbRole.SelectedIndexChanged += new System.EventHandler(this.cmbRole_SelectedIndexChanged);
             // 
             // txtNIC
             // 
@@ -170,6 +179,7 @@
             this.txtNIC.Name = "txtNIC";
             this.txtNIC.Size = new System.Drawing.Size(229, 20);
             this.txtNIC.TabIndex = 30;
+            this.txtNIC.TextChanged += new System.EventHandler(this.txtNIC_TextChanged);
             // 
             // label6
             // 
@@ -180,6 +190,7 @@
             this.label6.Size = new System.Drawing.Size(33, 18);
             this.label6.TabIndex = 29;
             this.label6.Text = "NIC";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // password
             // 
@@ -187,6 +198,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(229, 20);
             this.password.TabIndex = 32;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // label7
             // 
@@ -197,6 +209,7 @@
             this.label7.Size = new System.Drawing.Size(75, 18);
             this.label7.TabIndex = 31;
             this.label7.Text = "Password";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // userName
             // 
@@ -204,6 +217,7 @@
             this.userName.Name = "userName";
             this.userName.Size = new System.Drawing.Size(489, 20);
             this.userName.TabIndex = 34;
+            this.userName.TextChanged += new System.EventHandler(this.userName_TextChanged);
             // 
             // label8
             // 
@@ -214,6 +228,7 @@
             this.label8.Size = new System.Drawing.Size(77, 18);
             this.label8.TabIndex = 33;
             this.label8.Text = "Username";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // fnameVerify
             // 
@@ -225,6 +240,7 @@
             this.fnameVerify.TabIndex = 35;
             this.fnameVerify.Text = "*";
             this.fnameVerify.Visible = false;
+            this.fnameVerify.Click += new System.EventHandler(this.fnameVerify_Click);
             // 
             // lnameVerify
             // 
@@ -236,6 +252,7 @@
             this.lnameVerify.TabIndex = 36;
             this.lnameVerify.Text = "*";
             this.lnameVerify.Visible = false;
+            this.lnameVerify.Click += new System.EventHandler(this.lnameVerify_Click);
             // 
             // nicVerify
             // 
@@ -247,6 +264,7 @@
             this.nicVerify.TabIndex = 37;
             this.nicVerify.Text = "*";
             this.nicVerify.Visible = false;
+            this.nicVerify.Click += new System.EventHandler(this.nicVerify_Click);
             // 
             // passwordVerify
             // 
@@ -258,6 +276,7 @@
             this.passwordVerify.TabIndex = 38;
             this.passwordVerify.Text = "*";
             this.passwordVerify.Visible = false;
+            this.passwordVerify.Click += new System.EventHandler(this.passwordVerify_Click);
             // 
             // roleVerify
             // 
@@ -269,6 +288,7 @@
             this.roleVerify.TabIndex = 39;
             this.roleVerify.Text = "*";
             this.roleVerify.Visible = false;
+            this.roleVerify.Click += new System.EventHandler(this.roleVerify_Click);
             // 
             // userNameVerify
             // 
@@ -280,6 +300,7 @@
             this.userNameVerify.TabIndex = 42;
             this.userNameVerify.Text = "*User Already Exists";
             this.userNameVerify.Visible = false;
+            this.userNameVerify.Click += new System.EventHandler(this.userNameVerify_Click);
             // 
             // AddUsers
             // 

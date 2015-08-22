@@ -157,5 +157,110 @@ namespace uiLayer
             cmbRole.Text = "";
             labelRemover();
         }
+
+        private void txtFname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNIC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fnameVerify_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lnameVerify_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nicVerify_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordVerify_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roleVerify_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userNameVerify_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

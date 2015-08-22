@@ -40,6 +40,7 @@
             this.nICDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.updateBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -129,11 +130,23 @@
             this.deleteBtn.Visible = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // updateBtn
+            // 
+            this.updateBtn.Location = new System.Drawing.Point(398, 284);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(113, 42);
+            this.updateBtn.TabIndex = 55;
+            this.updateBtn.Text = "Update";
+            this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Visible = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
+            // 
             // viewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 338);
+            this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.usersDataGrid);
             this.Name = "viewUsers";
@@ -157,5 +170,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nICDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.Button updateBtn;
     }
 }

@@ -169,5 +169,66 @@ namespace dataAccessLayer
             return result;
         }
 
+        public Boolean updateUser(user tempUser)
+        {
+            int result = 0;
+            try
+            {
+                using (SqlConnection con = new SqlConnection(conString))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("updateUser", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uName", tempUser.Username);
+                    cmd.Parameters.AddWithValue("@fName", tempUser.First_Name);
+                    cmd.Parameters.AddWithValue("@lName", tempUser.Last_Name);
+                    cmd.Parameters.AddWithValue("@address", tempUser.Address);
+                    cmd.Parameters.AddWithValue("@tel", tempUser.Telephone);
+                    cmd.Parameters.AddWithValue("@nic", tempUser.NIC);
+                    cmd.Parameters.AddWithValue("@role", tempUser.Role);
+                    cmd.Parameters.AddWithValue("@pWord", tempUser.Password);
+                    result = cmd.ExecuteNonQuery();
+                    if (con.State == ConnectionState.Open)
+                        con.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Error("DAL Error in insertUser: " + e.Message);
+                //Console.WriteLine("DAL Error in insertUser: " + e.Message);
+            }
+            if (result.Equals(0))
+                return false;
+            else
+                return true;
+        }
+
+        public Boolean deleteUser(user tempUser)
+        {
+            int result = 0;
+            try
+            {
+                using (SqlConnection con = new SqlConnection(conString))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("deleteUserByUName", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@uName", tempUser.Username);
+                    result = cmd.ExecuteNonQuery();
+                    if (con.State == ConnectionState.Open)
+                        con.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Error("DAL Error in insertUser: " + e.Message);
+                //Console.WriteLine("DAL Error in insertUser: " + e.Message);
+            }
+            if (result.Equals(0))
+                return false;
+            else
+                return true;
+        }
+
     }
 }

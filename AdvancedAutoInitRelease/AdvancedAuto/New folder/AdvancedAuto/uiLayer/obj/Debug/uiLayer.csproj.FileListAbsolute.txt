@@ -78,7 +78,10 @@ C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRel
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.csprojResolveAssemblyReference.cache
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.AddNewItem.resources
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.AddProduct.resources
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.AddUsers.resources
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.currentStocks.resources
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.editProducts.resources
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.editUsers.resources
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.MainMenuAdmin.resources
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.Properties.Resources.resources
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.viewBill.resources
@@ -89,4 +92,3 @@ C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRel
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.csproj.GenerateResource.Cache
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.exe
 C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.pdb
-C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\uiLayer\obj\Debug\uiLayer.editProducts.resources
