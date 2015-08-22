@@ -3,3 +3,8 @@ C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\entityLayer\bin\Re
 C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Release\ResolveAssemblyReference.cache
 C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Release\entityLayer.dll
 C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Release\entityLayer.pdb
+C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\bin\Release\entityLayer.dll
+C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\bin\Release\entityLayer.pdb
+C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Release\entityLayer.dll
+C:\Users\Chalani\Desktop\AdvnceAuto\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\entityLayer\obj\Release\entityLayer.pdb

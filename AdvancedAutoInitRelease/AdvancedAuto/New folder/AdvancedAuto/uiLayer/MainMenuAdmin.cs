@@ -11,6 +11,7 @@ using System.Drawing.Printing;
 using entityLayer;
 using businessLayer;
 using log4net;
+using System.Globalization;
 
 namespace uiLayer
 {
@@ -331,17 +332,17 @@ namespace uiLayer
                                 printBillItmLst.Add(billItemsGrid[i]);
                             }
                         }
+                        billItemsGrid.Clear();
                         billItemsGrid = printBillItmLst;
                         PrintDialog printDialog = new PrintDialog();
 
                         PrintDocument printDocument = new PrintDocument();
 
-                        printDialog.Document = printDocument; //add the document to the dialog box...        
+                        printDialog.Document = printDocument;
 
                         printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(CreateReceipt); //add an event handler that will do the printing
 
-                        //on a till you will not want to ask the user where to print but this is fine for the test envoironment.
-                        //Console.Write(PrintSettings.InstalledPrinters);
+
                         DialogResult result2 = printDialog.ShowDialog();
 
                         if (result2 == DialogResult.OK)
@@ -349,14 +350,34 @@ namespace uiLayer
                             printDocument.Print();
 
                         }
-                        billItemsGrid.Clear();
-                        searchedProds.Clear();
-                        billingGrid.Rows.Clear();
+
+
+
                     }
+                    billItemsGrid.Clear();
+                    searchedProds.Clear();
+                    billingGrid.Rows.Clear();
+                    searchItmValueTxt.Text = "";
+                    txtCustName.Text = "";
+                    txtCustTel.Text = "";
+                    txtCarNo.Text = "";
+                    billingGrid.DataSource = null;
+                    lblBillTotal.Text = "0";
+                    lstBxSearchItms.Items.Clear();
                 }
                 else if (result.Equals(false))
                 {
                     MessageBox.Show("Bill Generation failed.\n Data werent added properly", "Bill Generation failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    billItemsGrid.Clear();
+                    searchedProds.Clear();
+                    billingGrid.Rows.Clear();
+                    searchItmValueTxt.Text = "";
+                    txtCustName.Text = "";
+                    txtCustTel.Text = "";
+                    txtCarNo.Text = "";
+                    billingGrid.DataSource = null;
+                    lblBillTotal.Text = "0";
+                    lstBxSearchItms.Items.Clear();
                 }
 
             }
@@ -364,38 +385,18 @@ namespace uiLayer
             {
                 Console.WriteLine("UIL Error in MainMenuAdmin.billBtn_Click: " + err.ToString());
                 logger.Error("UI Error in MainMenuAdmin.billBtn_Click: " + err.ToString());
+                billItemsGrid.Clear();
+                searchedProds.Clear();
+                billingGrid.Rows.Clear();
+                searchItmValueTxt.Text = "";
+                txtCustName.Text = "";
+                txtCustTel.Text = "";
+                txtCarNo.Text = "";
+                billingGrid.DataSource = null;
+                lblBillTotal.Text = "0";
+                lstBxSearchItms.Items.Clear();
             }
-            //try 
-            //{
-            //    stockDataManipulations stockDataManipulations = new stockDataManipulations();
-            //    List<issueBill> userBill = new List<issueBill>();
-            //    String customer_name = txtCustName.Text;
-            //    String customer_tel = txtCustTel.Text;
-            //    decimal bill_total = 0m;
-            //    DateTime bill_date = DateTime.Now;
-            //    String username = wrapperDataBuffer.WrapperObject.User1.Username;
-            //    foreach (DataGridViewRow row in billingGrid.Rows)
-            //    {
 
-            //        int id = Convert.ToInt32(row.Cells[0].Value.ToString());
-            //        string category = row.Cells[1].Value.ToString();
-            //        string itemCode = row.Cells[2].Value.ToString();
-            //        string itemName = row.Cells[3].Value.ToString();
-            //        int quantity = Convert.ToInt32(row.Cells[4].Value.ToString());
-            //        decimal price = Convert.ToDecimal(row.Cells[5].Value.ToString());
-            //        decimal total = Convert.ToDecimal(row.Cells[6].Value.ToString());
-            //        bill_total = bill_total + total;
-
-
-
-            //        issueBill billItem = new issueBill(id, category, itemCode, itemName,
-            //            quantity, price, total);
-            //        userBill.Add(billItem);
-            //    }
-            //    stockDataManipulations sm1 = new stockDataManipulations();
-            //    sm1.billItem(customer_name, customer_tel, username, bill_date, bill_total, userBill);
-            //}
-            //catch (Exception err) { logger.Error("UI Error in billBtn_Click: " + err.ToString()); }
 
 
         }
@@ -407,6 +408,8 @@ namespace uiLayer
             txtCustTel.Text = "";
             txtCarNo.Text = "";
             billingGrid.DataSource = null;
+            lblBillTotal.Text = "0";
+            lstBxSearchItms.Items.Clear();
         }
 
         private void removeGridItem_Click(object sender, EventArgs e)
@@ -418,7 +421,7 @@ namespace uiLayer
                     int selectedIndex = billingGrid.CurrentCell.RowIndex;
                     if (selectedIndex > -1)
                     {
-                        completeTotal = completeTotal-billItemsGrid[selectedIndex].Total;
+                        completeTotal = completeTotal - billItemsGrid[selectedIndex].Total;
                         billItemsGrid.RemoveAt(selectedIndex);
                         billingGrid.Rows.RemoveAt(selectedIndex);
                         billingGrid.Refresh();
@@ -455,10 +458,10 @@ namespace uiLayer
                     //billingGrid.DataSource = gridViewData;
                     if (searchedProds.ElementAt(lstBxSearchItms.SelectedIndex).Quantity > quantity)
                     {
-                        if (!isProdAvailable(searchedProds[0]))
+                        if (!isProdAvailable(searchedProds[lstBxSearchItms.SelectedIndex]))
                         {
-                            decimal total = searchedProds[0].ProductPrice * quantity;
-                            billItemsGrid.Add(new billingItem(0, null, searchedProds[0], quantity, total, "Product"));
+                            decimal total = searchedProds[lstBxSearchItms.SelectedIndex].ProductPrice * quantity;
+                            billItemsGrid.Add(new billingItem(0, null, searchedProds[lstBxSearchItms.SelectedIndex], quantity, total, "Product"));
                             generateGrid();
                         }
                         else
@@ -509,11 +512,11 @@ namespace uiLayer
             //int count = 0;
             billingGrid.Rows.Clear();
             completeTotal = 0.0m;
-            
+
             for (int i = 0; i < billItemsGrid.Count; i++)
             {
                 billingGrid.Rows.Add();
-                
+
                 billingGrid.Rows[i].Cells[0].Value = "YES";
                 if (billItemsGrid[i]._type.Equals("Service"))
                 {
@@ -610,22 +613,59 @@ namespace uiLayer
             //float change = 0.00f;
 
             //this prints the reciept
-
+            CultureInfo sinhala = new CultureInfo("si-LK");
             Graphics graphic = e.Graphics;
 
             Font font = new Font("Courier New", 12); //must use a mono spaced font as the spaces need to line up
+            Font fontx = new Font("Courier New", 10);
+            Font font2x = new Font("Courier New", 6);
 
             float fontHeight = font.GetHeight();
+
+
 
             int startX = 10;
             int startY = 10;
             int offset = 40;
 
-            graphic.DrawString(" Advanced Auto Tec - Motorwork", new Font("Courier New", 18), new SolidBrush(Color.Black), startX, startY);
-            string top = "Item Name".PadRight(30) + "Price";
-            graphic.DrawString(top, font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString(" Advanced Auto Tec - Motorwork", new Font("Courier New", 20, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY);
+            graphic.DrawString(" Akuressa Road, Nugaduwa, Galle. Tel: +94773854699/ +94912227296", new Font("Courier New", 8), new SolidBrush(Color.Black), startX + 39, startY + offset - 8);
+            graphic.DrawString("****************************************************", font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset = offset + (int)font.GetHeight();
+            String custNameNTelLine = "Customer Name: ";
+            if (txtCustName.Text.Length < 41)
+            {
+                int padLength = 30 - txtCustName.Text.Length;
+                custNameNTelLine = custNameNTelLine + txtCustName.Text;
+
+            }
+            String custTel = "Customer Tel: " + txtCustTel.Text;
+            graphic.DrawString(custNameNTelLine, fontx, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString(custTel, fontx, new SolidBrush(Color.Black), startX + 300, startY + offset);
+            offset = offset + (int)fontx.GetHeight() + 3;
+            String custDteNcarNo = "Date: ";
+            String billDay = DateTime.Today.ToString("yyyy-MM-dd HH:mm:ss");
+            if (billDay.Length < 48)
+            {
+                int padLength = 47 - billDay.Length;
+                custDteNcarNo = custDteNcarNo + billDay.PadRight(padLength);
+            }
+            String carNum = "Vehicle No.: " + txtCarNo.Text;
+            graphic.DrawString(custDteNcarNo, fontx, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString(carNum, fontx, new SolidBrush(Color.Black), startX + 300, startY + offset);
+            offset = offset + (int)font.GetHeight() + 3;
+            graphic.DrawString("****************************************************", font, new SolidBrush(Color.Black), startX, startY + offset);
+            offset = offset + Convert.ToInt32(fontx.GetHeight()) + 5;
+            string top = "Item Code".PadRight(10) + "Item Name".PadRight(30) + "Qty" + "Price".PadRight(10) + "Total".PadRight(15);
+            offset = offset + 10;
+            graphic.DrawString("Code", fontx, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("Name", fontx, new SolidBrush(Color.Black), startX + 60, startY + offset);
+            graphic.DrawString("Qty", fontx, new SolidBrush(Color.Black), startX + 290, startY + offset);
+            graphic.DrawString("Price", fontx, new SolidBrush(Color.Black), startX + 350, startY + offset);
+            graphic.DrawString("Total", fontx, new SolidBrush(Color.Black), startX + 450, startY + offset);
+            //graphic.DrawString(top, fontx, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + (int)fontHeight; //make the spacing consistent
-            graphic.DrawString("----------------------------------", font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("----------------------------------------------------", font, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + (int)fontHeight + 5; //make the spacing consistent
 
             decimal totalprice = 0.00m;
@@ -633,100 +673,60 @@ namespace uiLayer
             DataGrid dg1 = generatePrintTable();
             for (int ix = 0; ix < billItemsGrid.Count; ix++)
             {
-                if (billingGrid.Rows[ix].Cells[0].Value.Equals("YES"))
+                //if (billingGrid.Rows[ix].Cells[0].Value.Equals("YES"))
+                //{
+
+                if (billItemsGrid[ix]._type.Equals("Product"))
                 {
-                    String producPrintString = "";
-                    if (billItemsGrid[ix]._type.Equals("Product"))
-                    {
 
-                        String prodCode = billItemsGrid[ix].Product.ProductCode;
-                        if (prodCode.Length < 30)
-                        {
-                            int paddedLngth = 30 - prodCode.Length;
-                            producPrintString = producPrintString + prodCode.PadRight(paddedLngth);
-                        }
-                        String prodName = billItemsGrid[ix].Product.ProductName;
-                        if (prodName.Length < 250)
-                        {
-                            int paddedLngth = 250 - prodName.Length;
-                            producPrintString = producPrintString + prodName.PadRight(paddedLngth);
-                        }
 
-                        String prodQty = "" + billItemsGrid[ix].Quantiy;
-                        if (prodQty.Length < 30)
-                        {
-                            int paddedLngth = 50 - prodQty.Length;
-                            producPrintString = producPrintString + prodQty.PadRight(paddedLngth);
-                        }
+                    graphic.DrawString(billItemsGrid[ix].Product.ProductCode, fontx, new SolidBrush(Color.Black), startX, startY + offset);
 
-                        String unitPrice = "" + billItemsGrid[ix].Product.ProductPrice;
-                        if (unitPrice.Length < 30)
-                        {
-                            int paddedLngth = 50 - unitPrice.Length;
-                            producPrintString = producPrintString + unitPrice.PadRight(paddedLngth);
-                        }
+                    graphic.DrawString(billItemsGrid[ix].Product.ProductName, fontx, new SolidBrush(Color.Black), startX + 60, startY + offset);
 
-                        String ProdTotal = "" + billItemsGrid[ix].Total;
-                        totalprice = totalprice + billItemsGrid[ix].Total;
-                        if (ProdTotal.Length < 50)
-                        {
-                            int paddedLngth = 50 - ProdTotal.Length;
-                            producPrintString = producPrintString + ProdTotal.PadRight(paddedLngth);
-                        }
-                    }
-                    else if (billItemsGrid[ix]._type.Equals("Service"))
-                    {
+                    graphic.DrawString("" + billItemsGrid[ix].Quantiy, fontx, new SolidBrush(Color.Black), startX + 290, startY + offset);
 
-                        String prodCode = "" + billItemsGrid[ix].Service.Service_ID;
-                        if (prodCode.Length < 30)
-                        {
-                            int paddedLngth = 30 - prodCode.Length;
-                            producPrintString = producPrintString + prodCode.PadRight(paddedLngth);
-                        }
-                        String prodName = billItemsGrid[ix].Service.Service_Name;
-                        if (prodName.Length < 250)
-                        {
-                            int paddedLngth = 250 - prodName.Length;
-                            producPrintString = producPrintString + prodName.PadRight(paddedLngth);
-                        }
-                        String prodQty = "" + billItemsGrid[ix].Quantiy;
-                        if (prodQty.Length < 30)
-                        {
-                            int paddedLngth = 50 - prodQty.Length;
-                            producPrintString = producPrintString + prodQty.PadRight(paddedLngth);
-                        }
+                    graphic.DrawString("" + billItemsGrid[ix].Product.ProductPrice, fontx, new SolidBrush(Color.Black), startX + 350, startY + offset);
 
-                        String unitPrice = "" + billItemsGrid[ix].Service.Service_Price;
-                        if (unitPrice.Length < 30)
-                        {
-                            int paddedLngth = 50 - unitPrice.Length;
-                            producPrintString = producPrintString + unitPrice.PadRight(paddedLngth);
-                        }
+                    totalprice = totalprice + billItemsGrid[ix].Total;
 
-                        String ProdTotal = "" + billItemsGrid[ix].Total;
-                        totalprice = totalprice + billItemsGrid[ix].Total;
-                        if (ProdTotal.Length < 50)
-                        {
-                            int paddedLngth = 50 - ProdTotal.Length;
-                            producPrintString = producPrintString + ProdTotal.PadRight(paddedLngth);
-                        }
-                    }
-
-                    graphic.DrawString(producPrintString, font, new SolidBrush(Color.Black), startX, startY + offset);
-                    offset = offset + (int)fontHeight + 5;
+                    graphic.DrawString("" + billItemsGrid[ix].Total, fontx, new SolidBrush(Color.Black), startX + 450, startY + offset);
                 }
+                else if (billItemsGrid[ix]._type.Equals("Service"))
+                {
+
+                    graphic.DrawString("N/A", fontx, new SolidBrush(Color.Black), startX, startY + offset);
+
+                    graphic.DrawString(billItemsGrid[ix].Service.Service_Name, fontx, new SolidBrush(Color.Black), startX + 60, startY + offset);
+
+                    graphic.DrawString("" + billItemsGrid[ix].Quantiy, fontx, new SolidBrush(Color.Black), startX + 290, startY + offset);
+
+                    graphic.DrawString("" + billItemsGrid[ix].Service.Service_Price + ".00", fontx, new SolidBrush(Color.Black), startX + 350, startY + offset);
+
+                    totalprice = totalprice + billItemsGrid[ix].Total;
+
+                    graphic.DrawString("" + billItemsGrid[ix].Total + ".00", fontx, new SolidBrush(Color.Black), startX + 450, startY + offset);
+                }
+
+                offset = offset + (int)fontHeight + 5;
+                //}
 
             }
 
             offset = offset + 20;
-            graphic.DrawString("Total to pay (R.S.) ".PadRight(30) + String.Format("{0:c}", totalprice), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+            //graphic.DrawString("Total to pay (R.S.) ".PadRight(30) + String.Format(sinhala,"{0:c}", totalprice), new Font("Courier New", 12, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("Total to pay (R.S.)", new Font("Courier New", 10, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString(totalprice + "", new Font("Courier New", 10, FontStyle.Bold), new SolidBrush(Color.Black), startX + 450, startY + offset);
+            offset = offset + 40;
+            graphic.DrawString("Customer Signature", new Font("Courier New", 10, FontStyle.Bold), new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("..........", new Font("Courier New", 10, FontStyle.Bold), new SolidBrush(Color.Black), startX + 450, startY + offset);
             offset = offset + 30; //make some room so that the total stands out.
-            graphic.DrawString("     Thank-you for your custom,", font, new SolidBrush(Color.Black), startX, startY + offset);
+            graphic.DrawString("     Thank-you for your custom! Please Come Again.", fontx, new SolidBrush(Color.Black), startX, startY + offset);
             offset = offset + 15;
-            graphic.DrawString("       please come back soon!", font, new SolidBrush(Color.Black), startX, startY + offset);
-            Font font2 = new Font("Courier New", 8);
-            offset = offset + 15;
-            graphic.DrawString("CDENSOFT", font, new SolidBrush(Color.Black), startX, startY + offset);
+            //graphic.DrawString("       please come back soon!", fontx, new SolidBrush(Color.Black), startX, startY + offset);
+            //Font font2 = new Font("Courier New", 8);
+            //offset = offset + 15;
+            graphic.DrawString("CDENSOFT +94778647101", font2x, new SolidBrush(Color.Black), startX + 200, startY + offset);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -789,11 +789,11 @@ namespace uiLayer
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            
+
             DialogResult result1 = MessageBox.Show("Are you sure you want to logout?",
         "Logout?",
         MessageBoxButtons.YesNo);
-            if (result1 == DialogResult.Yes) 
+            if (result1 == DialogResult.Yes)
             {
                 billItemsGrid.Clear();
                 wrapperDataBuffer.WrapperObject = null;

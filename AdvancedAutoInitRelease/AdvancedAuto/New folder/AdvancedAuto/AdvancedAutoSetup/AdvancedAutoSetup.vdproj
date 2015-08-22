@@ -22,13 +22,13 @@
         "Entry"
         {
         "MsmKey" = "8:_0D25904C310BD3A3F70A0B347AC34976"
-        "OwnerKey" = "8:_DA370F24730D2AC0B3D839174FDF2E99"
+        "OwnerKey" = "8:_5B8617C169534BE8B8A9D8939766520E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_0D25904C310BD3A3F70A0B347AC34976"
-        "OwnerKey" = "8:_5B8617C169534BE8B8A9D8939766520E"
+        "OwnerKey" = "8:_DA370F24730D2AC0B3D839174FDF2E99"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,13 +64,13 @@
         "Entry"
         {
         "MsmKey" = "8:_69C22D6DA5CE8CBCBC829F7B486D958C"
-        "OwnerKey" = "8:_DA370F24730D2AC0B3D839174FDF2E99"
+        "OwnerKey" = "8:_5B8617C169534BE8B8A9D8939766520E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_69C22D6DA5CE8CBCBC829F7B486D958C"
-        "OwnerKey" = "8:_5B8617C169534BE8B8A9D8939766520E"
+        "OwnerKey" = "8:_DA370F24730D2AC0B3D839174FDF2E99"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,13 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5B8617C169534BE8B8A9D8939766520E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3132FC4657B5ECBE47373752CD0FADE6"
+        "OwnerKey" = "8:_69C22D6DA5CE8CBCBC829F7B486D958C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,7 +100,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_69C22D6DA5CE8CBCBC829F7B486D958C"
+        "OwnerKey" = "8:_3132FC4657B5ECBE47373752CD0FADE6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5B8617C169534BE8B8A9D8939766520E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -134,6 +134,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -158,6 +171,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -195,11 +221,6 @@
             "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0D25904C310BD3A3F70A0B347AC34976"
-                    {
-                    "Name" = "8:log4net.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:log4net.dll"
             "TargetName" = "8:"
@@ -246,11 +267,6 @@
             "AssemblyAsmDisplayName" = "8:dataAccessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3132FC4657B5ECBE47373752CD0FADE6"
-                    {
-                    "Name" = "8:dataAccessLayer.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:dataAccessLayer.dll"
             "TargetName" = "8:"
@@ -277,11 +293,6 @@
             "AssemblyAsmDisplayName" = "8:entityLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_69C22D6DA5CE8CBCBC829F7B486D958C"
-                    {
-                    "Name" = "8:entityLayer.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:entityLayer.dll"
             "TargetName" = "8:"
@@ -308,11 +319,6 @@
             "AssemblyAsmDisplayName" = "8:businessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_DA370F24730D2AC0B3D839174FDF2E99"
-                    {
-                    "Name" = "8:businessLayer.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:businessLayer.dll"
             "TargetName" = "8:"
@@ -407,7 +413,7 @@
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:CDenSoft"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

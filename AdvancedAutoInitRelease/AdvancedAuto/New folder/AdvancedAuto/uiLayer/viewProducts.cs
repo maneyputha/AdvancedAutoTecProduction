@@ -18,7 +18,7 @@ namespace uiLayer
     {
         private static readonly ILog logger = LogManager.GetLogger(typeof(viewProducts));
         BindingSource gridViewData;
-        int gridInit = 0;
+        //int gridInit = 0;
 
         public viewProducts()
         {
