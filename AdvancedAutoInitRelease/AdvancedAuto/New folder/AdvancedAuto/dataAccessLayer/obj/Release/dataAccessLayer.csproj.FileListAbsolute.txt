@@ -1,0 +1,8 @@
+C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Release\dataAccessLayer.dll
+C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Release\dataAccessLayer.pdb
+C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Release\entityLayer.dll
+C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Release\log4net.dll
+C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\bin\Release\entityLayer.pdb
+C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\obj\Release\dataAccessLayer.dll
+C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\dataAccessLayer\obj\Release\dataAccessLayer.pdb
