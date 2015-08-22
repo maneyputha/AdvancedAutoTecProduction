@@ -99,7 +99,7 @@ namespace uiLayer
                 {
                     MessageBox.Show("Update Successfull. Data updated successfully", "Important Note",
                     MessageBoxButtons.OK);
-                    currentView.bindDataTableData();
+                    currentView.updateDataTableData();
                     this.Dispose();
                 }
                 else

@@ -18,6 +18,8 @@ namespace uiLayer
     {
         private static readonly ILog logger = LogManager.GetLogger(typeof(viewProducts));
         BindingSource gridViewData;
+        int gridInit = 0;
+
         public viewProducts()
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace uiLayer
             }
         }
 
-        public void bindDataTableData()
+        private void bindDataTableData()
         {
             stockDataManipulations stockDataManipulations = new stockDataManipulations();
             List<products> productList = stockDataManipulations.getAllProducts();
@@ -58,7 +60,26 @@ namespace uiLayer
             }
         }
 
+        public void updateDataTableData()
+        {
+            stockDataManipulations stockDataManipulations = new stockDataManipulations();
+            List<products> productList = stockDataManipulations.getAllProducts();
 
+            for (int i = 0; i < productList.Count; i++)
+            {
+                productsDataGrid.Rows[i].Cells[0].Value = productList[i].ProductID;
+                productsDataGrid.Rows[i].Cells[1].Value = productList[i].ProductCode;
+                productsDataGrid.Rows[i].Cells[2].Value = productList[i].ProductName;
+                productsDataGrid.Rows[i].Cells[3].Value = productList[i].ProductMake;
+                productsDataGrid.Rows[i].Cells[4].Value = productList[i].ProductModel;
+                productsDataGrid.Rows[i].Cells[5].Value = productList[i].ProductDescription;
+                productsDataGrid.Rows[i].Cells[6].Value = productList[i].ProductCateogery.Item_Category_Name;
+                productsDataGrid.Rows[i].Cells[7].Value = productList[i].ProductPrice;
+                productsDataGrid.Rows[i].Cells[8].Value = productList[i].Quantity;
+                productsDataGrid.Rows[i].Cells[9].Value = productList[i].ProductCateogery;
+                productsDataGrid.Columns["categoryObj"].Visible = false;
+            }
+        }
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
