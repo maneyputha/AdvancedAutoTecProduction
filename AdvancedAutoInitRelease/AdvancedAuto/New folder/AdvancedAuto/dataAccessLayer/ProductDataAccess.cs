@@ -387,5 +387,40 @@ namespace dataAccessLayer
             return result;
         }
 
+        public Boolean updateProduct(products tempProduct)
+        {
+            int result = 0;
+            try
+            {
+                using (SqlConnection con = new SqlConnection(conString))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("updateProduct", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@pID", tempProduct.ProductID);
+                    cmd.Parameters.AddWithValue("@pCode", tempProduct.ProductCode);
+                    cmd.Parameters.AddWithValue("@pName", tempProduct.ProductName);
+                    cmd.Parameters.AddWithValue("@pMake", tempProduct.ProductMake);
+                    cmd.Parameters.AddWithValue("@pModel", tempProduct.ProductModel);
+                    cmd.Parameters.AddWithValue("@pDesc", tempProduct.ProductDescription);
+                    cmd.Parameters.AddWithValue("@pPrice", tempProduct.ProductPrice);
+                    cmd.Parameters.AddWithValue("@pCatID", tempProduct.ProductCateogery.Item_Category_ID);
+                    cmd.Parameters.AddWithValue("@qty", tempProduct.Quantity);
+                    result = cmd.ExecuteNonQuery();
+                    if (con.State == ConnectionState.Open)
+                        con.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                logger.Error("DAL Error in insertProduct: " + e.Message);
+                //Console.WriteLine("DAL Error in insertProduct: " + e.Message);
+            }
+            if (result.Equals(0))
+                return false;
+            else
+                return true;
+        }
+
     }
 }

@@ -39,7 +39,8 @@
             this.productCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productQuatity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.categoryObj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.updateBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.deleteBtn.TabIndex = 48;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Visible = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // productsDataGrid
@@ -69,7 +71,7 @@
             this.productCategory,
             this.productPrice,
             this.productQuatity,
-            this.delete});
+            this.categoryObj});
             this.productsDataGrid.Location = new System.Drawing.Point(7, 12);
             this.productsDataGrid.Name = "productsDataGrid";
             this.productsDataGrid.Size = new System.Drawing.Size(825, 276);
@@ -130,16 +132,29 @@
             this.productQuatity.Name = "productQuatity";
             this.productQuatity.ReadOnly = true;
             // 
-            // delete
+            // categoryObj
             // 
-            this.delete.HeaderText = "Delete";
-            this.delete.Name = "delete";
+            this.categoryObj.HeaderText = "Category Object";
+            this.categoryObj.Name = "categoryObj";
+            this.categoryObj.Visible = false;
+            // 
+            // updateBtn
+            // 
+            this.updateBtn.Location = new System.Drawing.Point(590, 306);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(113, 42);
+            this.updateBtn.TabIndex = 52;
+            this.updateBtn.Text = "Update";
+            this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Visible = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // viewProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 360);
+            this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.productsDataGrid);
             this.Controls.Add(this.deleteBtn);
             this.Name = "viewProducts";
@@ -162,6 +177,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn productPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn productQuatity;
-        private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryObj;
+        private System.Windows.Forms.Button updateBtn;
     }
 }

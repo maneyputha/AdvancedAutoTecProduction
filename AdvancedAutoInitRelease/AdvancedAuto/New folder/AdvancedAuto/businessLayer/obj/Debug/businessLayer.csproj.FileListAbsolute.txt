@@ -18,3 +18,13 @@ C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\
 C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.dll
 C:\Users\Chalani\Desktop\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.pdb
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\businessLayer.dll
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\businessLayer.pdb
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\dataAccessLayer.dll
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\entityLayer.dll
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\log4net.dll
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\dataAccessLayer.pdb
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\bin\Debug\entityLayer.pdb
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.dll
+C:\Users\Manendra\Documents\GitHub\AdvancedAutoTecProduction\AdvancedAutoInitRelease\AdvancedAuto\New folder\AdvancedAuto\businessLayer\obj\Debug\businessLayer.pdb

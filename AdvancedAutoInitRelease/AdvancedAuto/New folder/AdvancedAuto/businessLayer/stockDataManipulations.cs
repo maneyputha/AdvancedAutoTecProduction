@@ -235,6 +235,11 @@ namespace businessLayer
             return new StockDataAccess().DeleteStockByID(stockItem.Stock_ID);
         }
 
+        public Boolean updateProduct(products product)
+        {
+            return new ProductDataAccess().updateProduct(product);
+        }
+
         public Boolean deleteCategory(itemCategory catItem)
         {
             CatagoryDataAccess cda1 = new CatagoryDataAccess();

@@ -22,6 +22,16 @@ namespace uiLayer
             InitializeComponent();
             this.gridViewData = new BindingSource();
             bindDataTableData();
+            intializeFormuttons();
+        }
+
+        private void intializeFormuttons()
+        {
+            wrapper wrapperObj = wrapperDataBuffer.WrapperObject;
+            if (wrapperObj.User1.Role == "Admin")
+            {
+                deleteBtn.Visible = true;
+            }
         }
 
         private void bindDataTableData()

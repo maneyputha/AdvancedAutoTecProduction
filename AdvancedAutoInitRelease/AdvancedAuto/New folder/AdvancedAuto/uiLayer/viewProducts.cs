@@ -23,9 +23,20 @@ namespace uiLayer
             InitializeComponent();
             this.gridViewData = new BindingSource();
             bindDataTableData();
+            intializeFormuttons();
         }
 
-        private void bindDataTableData()
+        private void intializeFormuttons()
+        {
+            wrapper wrapperObj = wrapperDataBuffer.WrapperObject;
+            if (wrapperObj.User1.Role == "Admin")
+            {
+                deleteBtn.Visible = true;
+                updateBtn.Visible = true;
+            }
+        }
+
+        public void bindDataTableData()
         {
             stockDataManipulations stockDataManipulations = new stockDataManipulations();
             List<products> productList = stockDataManipulations.getAllProducts();
@@ -42,9 +53,12 @@ namespace uiLayer
                 productsDataGrid.Rows[i].Cells[6].Value = productList[i].ProductCateogery.Item_Category_Name;
                 productsDataGrid.Rows[i].Cells[7].Value = productList[i].ProductPrice;
                 productsDataGrid.Rows[i].Cells[8].Value = productList[i].Quantity;
-                productsDataGrid.Rows[i].Cells[9].Value = "Delete";
+                productsDataGrid.Rows[i].Cells[9].Value = productList[i].ProductCateogery;
+                productsDataGrid.Columns["categoryObj"].Visible = false;
             }
         }
+
+
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -57,12 +71,13 @@ namespace uiLayer
                 string productMake = productsDataGrid.Rows[selectedIndex].Cells[3].Value.ToString();
                 string productModel = productsDataGrid.Rows[selectedIndex].Cells[4].Value.ToString();
                 string productDescription = productsDataGrid.Rows[selectedIndex].Cells[5].Value.ToString();
-                string productPrice = productsDataGrid.Rows[selectedIndex].Cells[6].Value.ToString();
-                itemCategory itemCategory = (itemCategory)productsDataGrid.Rows[selectedIndex].Cells[7].Value;
+                string productPrice = productsDataGrid.Rows[selectedIndex].Cells[7].Value.ToString();
                 string quantity = productsDataGrid.Rows[selectedIndex].Cells[8].Value.ToString();
+                itemCategory itemCat = (itemCategory)productsDataGrid.Rows[selectedIndex].Cells[9].Value;
+
 
                 products selectedProduct = new products(int.Parse(productId), productCode, productName, productMake, productModel,
-                    productDescription, decimal.Parse(productPrice), itemCategory, int.Parse(quantity));
+                    productDescription, decimal.Parse(productPrice), itemCat, int.Parse(quantity));
 
                 stockDataManipulations stockDataManipulations = new stockDataManipulations();
                 Boolean stockDeletion = stockDataManipulations.deleteProduct(selectedProduct);
@@ -77,6 +92,30 @@ namespace uiLayer
                     MessageBox.Show("Deletion Failed. Error occured while deleting data", "Important Note",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 }
+            }
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = productsDataGrid.CurrentCell.RowIndex;
+            if (selectedIndex > -1)
+            {
+                string productId = productsDataGrid.Rows[selectedIndex].Cells[0].Value.ToString();
+                string productCode = productsDataGrid.Rows[selectedIndex].Cells[1].Value.ToString();
+                string productName = productsDataGrid.Rows[selectedIndex].Cells[2].Value.ToString();
+                string productMake = productsDataGrid.Rows[selectedIndex].Cells[3].Value.ToString();
+                string productModel = productsDataGrid.Rows[selectedIndex].Cells[4].Value.ToString();
+                string productDescription = productsDataGrid.Rows[selectedIndex].Cells[5].Value.ToString();
+                string productPrice = productsDataGrid.Rows[selectedIndex].Cells[7].Value.ToString();
+                string quantity = productsDataGrid.Rows[selectedIndex].Cells[8].Value.ToString();
+                itemCategory itemCat = (itemCategory)productsDataGrid.Rows[selectedIndex].Cells[9].Value;
+
+
+                products selectedProduct = new products(int.Parse(productId), productCode, productName, productMake, productModel,
+                    productDescription, decimal.Parse(productPrice), itemCat, int.Parse(quantity));
+
+                editProducts editProduct = new editProducts(selectedProduct, this);
+                editProduct.Show();
             }
         }
     }
